@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://kit.fontawesome.com/e0f0b03576.js" crossorigin="anonymous"></script>
+    <script src="src/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+    <title>Document</title>
+  <body>
+    <div class="container">
+      <h1> <h1/>
+    <h2>    
+    <div class="row">
+        <div class="col-3" id="city-name">
+            Istanbul
+          </div>
+        <form class="form-inline" id="city-form">
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="city-search"
+            placeholder="Enter City"
+          />
+          <button type="submit" class="btn btn-primary mb-2" id="searchlocation">Search</button>
+          <button type="current" class="current-location" id="mylocation">Current</button>
+        </form>
+      </h2>
+      <div class="middle"> 
+      <h3 class="date">23/01/2022</h3>
+        <h3 class="day">Sunday</h3>
+        <h4 id=time>20:16</h4>
+        <p>
+          <i class="fas fa-cloud-showers-heavy"></i>
+        </p>
+          <div class="today-temp">
+            <span class="temperaturex" id="temperature"> -1 </span> <span> <a href="#" id="celcius-link"> °C </a> | <a href="#" id = "fahrenheit-link" > °F </a></span>
+        </div>
+        <br />
+        <div class="row">
+        <div class="col">
+          Monday
+          <br />
+          <i class="fas fa-cloud-meatball"></i>
+          -1°C
+        </div>
+        <div class="col">
+          Tuesday
+        <br />
+        <i class="fas fa-snowflake"></i>
+        -1°C
+      </div>
+        <div class="col">Wednesday
+            <br />
+            <i class="fas fa-cloud-sun-rain"></i>
+            -1°C
+        </div>
+        <div class="col">Thursday
+            <br />
+            <i class="fas fa-cloud-sun"></i>
+            -1°C
+        </div>
+        <div class="col">Friday
+            <br />
+            <i class="fas fa-cloud-sun"></i>
+            -1°C
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

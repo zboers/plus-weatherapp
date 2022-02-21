@@ -1,0 +1,25 @@
+h1 {
+  color: blue;
+}
+h2 {
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid;
+  background-color: #defcf9;
+  border-color: grey;
+}
+.middle {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid;
+  background-color: #cadefc;
+  border-color: grey;
+}
+p {
+  font-size: 28px;
+}
+.current-location {
+  background: green;
+  color: #fff;
+}
