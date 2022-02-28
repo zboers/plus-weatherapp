@@ -45,15 +45,16 @@ let date = new Date();
 console.log(formatDate(date));
 
 function displayWeatherCondition(response) {
+  let cityElement = document.querySelector("#city-name");
+  let temperatureElement = document.querySelector("#temperature");
+  let windElement = document.querySelector("#windspeed");
+  let descriptionElement = document.querySelector("#description");
   let iconElement = document.querySelector("#icon");
   console.log(response.data);
-  document.querySelector("#city-name").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#windspeed").innerHTML = response.data.wind.speed;
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
+  cityElement.innerHTML = response.data.name;
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  windElement.innerHTML = response.data.wind.speed;
+  descriptionElement.innerHTML = response.data.weather[0].description;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
