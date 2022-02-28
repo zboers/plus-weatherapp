@@ -44,13 +44,26 @@ function formatDate(date) {
 let date = new Date();
 console.log(formatDate(date));
 
+let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
+let currentTime = document.querySelector("#time");
+currentTime.innerHTML = `${hours}:${minutes}`;
+
 function displayWeatherCondition(response) {
   let cityElement = document.querySelector("#city-name");
   let temperatureElement = document.querySelector("#temperature");
   let windElement = document.querySelector("#windspeed");
   let descriptionElement = document.querySelector("#description");
   let iconElement = document.querySelector("#icon");
-  console.log(response.data);
+
   cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   windElement.innerHTML = response.data.wind.speed;
@@ -59,6 +72,7 @@ function displayWeatherCondition(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(event) {
@@ -91,25 +105,23 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", covertToCelcius);
 
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-
-let currentTime = document.querySelector("#time");
-currentTime.innerHTML = `${hours}:${minutes}`;
-
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let heading = document.querySelector("#temperature");
-  heading.innerHTML = `${temperature}`;
   let location = document.querySelector("#city-name");
+  let wind = document.querySelector("#windspeed");
+  let description = document.querySelector("#description");
+  let icon = document.querySelector("#icon");
+
+  heading.innerHTML = `${temperature}`;
   location.innerHTML = response.data.name;
+  wind.innerHTML = response.data.wind.speed;
+  description.innerHTML = response.data.weather[0].description;
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  icon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showPosition(position) {
