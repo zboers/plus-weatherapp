@@ -45,6 +45,7 @@ let date = new Date();
 console.log(formatDate(date));
 
 function displayWeatherCondition(response) {
+  let iconElement = document.querySelector("#icon");
   console.log(response.data);
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -53,6 +54,10 @@ function displayWeatherCondition(response) {
   document.querySelector("#windspeed").innerHTML = response.data.wind.speed;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(event) {
