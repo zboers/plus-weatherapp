@@ -64,8 +64,10 @@ function displayWeatherCondition(response) {
   let descriptionElement = document.querySelector("#description");
   let iconElement = document.querySelector("#icon");
 
+  celciusTemperature = response.data.main.temp;
+
   cityElement.innerHTML = response.data.name;
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
   windElement.innerHTML = response.data.wind.speed;
   descriptionElement.innerHTML = response.data.weather[0].description;
   iconElement.setAttribute(
@@ -87,20 +89,23 @@ function searchCity(event) {
 let searchFunction = document.querySelector("#city-form");
 searchFunction.addEventListener("submit", searchCity);
 
+let celciusTemperature = null;
+
 function convertToFahrenheit(event) {
   event.preventDefault();
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 30;
-}
-
-function covertToCelcius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = -1;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+function covertToCelcius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
 
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", covertToCelcius);
