@@ -10,17 +10,19 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://kit.fontawesome.com/e0f0b03576.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
     <title>Zehra`s weather app</title>
   <body>
-    <div class="container">
-    <h2>    
-    <div class="row">
+  <div class="allpage">
+    <div class="container">    
+     <div class="row">
       <h1>How is the weather?</h1>
-        
         <form class="form-inline" id="city-form">
           <input
             type="text"
@@ -28,11 +30,11 @@
             id="city-search"
             placeholder="Enter a city"
           />
-          <button type="submit" class="btn btn-primary mb-2" id="searchlocation">Search</button>
+          <button type="submit" class="btn btn-primary mb-2" id="searchlocation"> Search</button>
           <button type="current" class="current-location" id="mylocation">Use my location</button>
         </form>
-      </h2>
-      
+      </div>
+      </div>
       <div class="middle">
       <h4><span class="col-3" id="city-name">Istanbul</span>
       <br />
@@ -81,6 +83,6 @@
     </div>
     <script src="src/index.js"></script>
   </body>
-  <div>
-    <a href="https://github.com/zboers/plus-weatherapp" target="_blank"> Open-source code </a>, by Zehra Aykut</div>
+  <div class="footer">
+    <a href="https://github.com/zboers/plus-weatherapp" target="_blank" id="github"> Open-source code </a>, by Zehra Aykut</div>
 </html>
