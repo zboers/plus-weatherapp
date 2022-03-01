@@ -1,6 +1,6 @@
 .allpage {
   font-family: "Roboto", sans-serif;
-  width: 50%;
+  width: 35%;
   text-align: center;
   padding: 30px;
 }
@@ -22,7 +22,7 @@
   border-color: #62b3e0;
 }
 button {
-  width: 268px;
+  width: 255px;
   font-size: 18px;
   padding: 4px;
   border-radius: 6px;
@@ -51,10 +51,10 @@ h1 {
   font-size: 28px;
 }
 
-#temperature{
+#temperature {
   font-size: 50px;
-   position: relative;
-   top: 12px;
+  position: relative;
+  top: 12px;
 }
 
 .active {
