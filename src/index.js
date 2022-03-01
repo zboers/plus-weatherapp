@@ -36,9 +36,9 @@ function formatDate(date) {
   let year = now.getFullYear();
   let day = days[date.getDay()];
 
-  let pageDate = document.querySelector("h3.date");
+  let pageDate = document.querySelector("#date");
   pageDate.innerHTML = `${pdate} ${month} ${year}`;
-  let pageDay = document.querySelector("h3.day");
+  let pageDay = document.querySelector("#day");
   pageDay.innerHTML = `${day}`;
 }
 let date = new Date();

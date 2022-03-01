@@ -19,31 +19,35 @@
     <div class="container">
     <h2>    
     <div class="row">
-        <div class="col-3" id="city-name">
-            Istanbul
-          </div>
+      <h1>How is the weather?</h1>
+        
         <form class="form-inline" id="city-form">
           <input
             type="text"
             class="form-control mb-2 mr-sm-2"
             id="city-search"
-            placeholder="Enter City"
+            placeholder="Enter a city"
           />
           <button type="submit" class="btn btn-primary mb-2" id="searchlocation">Search</button>
-          <button type="current" class="current-location" id="mylocation">Current</button>
+          <button type="current" class="current-location" id="mylocation">Use my location</button>
         </form>
       </h2>
-      <div class="middle"> 
-      <h3 class="date">23/01/2022</h3>
-        <h3 class="day">Sunday</h3>
-        <h4 id=time>20:16</h4>
-        <p>
-          <img class="icon" id="icon" src= "https://ssl.gstatic.com/onebox/weather/64/sunny.png" /> <span class="description" id="description">Cloudy</span>
+      
+      <div class="middle">
+      <h4><span class="col-3" id="city-name">Istanbul</span>
+      <br />
+    </span><span class="date" id="date">23/01/2022</span> . <span class="day" id="day">Sunday</span> . <span id=time>20:16</span> </h4>
+      <p>
+          <span class="description" id="description">Cloudy</span>
         </p>
+      
           <div class="today-temp">
-            <span class="temperaturex" id="temperature"> -1 </span> <span> <a href="#" id="celcius-link" class="active"> °C </a> | <a href="#" id = "fahrenheit-link" class="active" > °F </a></span>
+             <img class="icon" id="icon" src= "https://ssl.gstatic.com/onebox/weather/64/sunny.png" />
+            <span class="temperaturex" id="temperature"> -1 </span> 
+          <br /> <a href="#" id="celcius-link" class="active"> °C </a> | <a href="#" id = "fahrenheit-link" class="active" > °F </a>
         </div>
-        <div ><span>Wind</span> <span class="windspeed" id="windspeed">5</span></div>
+        <br />
+        <div ><span>Wind</span> <span class="windspeed" id="windspeed">5</span> km/h</div>
         <br />
         <div class="row">
         <div class="col">
