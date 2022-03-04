@@ -72,3 +72,21 @@ h1 {
   text-decoration: none;
   font-weight: 600;
 }
+
+.weather-forecast {
+  margin-top: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.9;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
