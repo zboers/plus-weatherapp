@@ -49,6 +49,31 @@ if (hours < 10) {
   hours = `0${hours}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+       <div class="weather-forecast-date">${day}</div>          
+        <i class="fas fa-cloud-meatball"></i>
+          <br />
+          <div class="weather-forecast-temperature">
+            <span class="weather-forecast-temperature-max">12° </span> 
+            <span class="weather-forecast-temperature-min"> 7°</div>
+        </div>
+      </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
@@ -113,6 +138,8 @@ function covertToCelcius(event) {
 
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", covertToCelcius);
+
+displayForecast();
 
 function showPosition(position) {
   let latitude = position.coords.latitude;
