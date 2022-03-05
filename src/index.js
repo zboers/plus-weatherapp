@@ -124,11 +124,18 @@ function displayWeatherCondition(response) {
 
 function searchCity(event) {
   event.preventDefault();
-  let apiKey = "732b2a948c672aa8d652e665fc139d07";
   let city = document.querySelector("#city-search").value;
+
+  search(city);
+}
+
+function search(city) {
+  let apiKey = "732b2a948c672aa8d652e665fc139d07";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
+
+search("Istanbul");
 
 let searchFunction = document.querySelector("#city-form");
 searchFunction.addEventListener("submit", searchCity);
